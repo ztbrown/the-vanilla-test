@@ -1,0 +1,62 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="main-styles.css">
+    <title>Stempland</title>
+
+</head>
+
+<body>
+    <div class="content-container highlight-color" id="nice-landing-wrapper">
+        <div class="content">
+            <div class="section">
+
+                <div class="copy-container">
+                    <div id="nice">
+                     
+                    </div>
+                </div>
+
+            </div>
+            <div id="bottom-anchor"></div>
+        </div>
+    </div>
+    <script>
+
+        window.setInterval(
+            function () {
+
+                var node = document.createElement("P");
+                var textnode = document.createTextNode("packs");
+                node.appendChild(textnode);
+                document.getElementById("nice").appendChild(node);
+
+                var niceServed = document.getElementById("nice").querySelectorAll('P').length;
+
+                var fontSizer = (20 - (niceServed / 1.5) + "vw")
+                var smallestFontSize = ("6vw")
+                var x = document.getElementById("nice").querySelectorAll('P');
+                var i;
+                if (niceServed < 20) {
+                    for (i = 0; i < x.length; i++) {
+
+                        x[i].style.fontSize = fontSizer;
+                    }
+                }
+                else {
+                    for (i = 0; i < x.length; i++) {
+
+                        x[i].style.fontSize = smallestFontSize;
+                    }
+                }
+
+
+
+
+
+            }, 1000);
+
+
+
+    </script>
+</body>
